@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Security-Policy"/>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="css/icomoon-search.css">
+        <link rel="stylesheet" type="text/css" href="css/animations.css">
+        <link rel="stylesheet" type="text/css" href="css/app.css">
+        <title>Hello World</title>
+    </head>
+    <body>
+    <div id="loadCircle"><i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i></div>
+	<div id="heightHelper"></div>
+	<div id="responsiveFormsHelper"></div>
+
+	<div id="log">
+
+		<div id="log_connect">
+			<form id="log_connect_form">
+				<input type="text" id="log_connect_form_mail" placeholder="e-Mail"></input>
+				<input type="text" id="log_connect_form_password" placeholder="Mot de passe"></input>
+				<div id="log_connect_form_submit">Connexion</div>
+			</form>
+			<div id="log_connect_toSubscribe">S'inscrire</div>
+			<div id="log_connect_loading"><i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i></div>
+		</div>
+
+
+
+		<div id="log_subscribe">
+			<form id="log_subscribe_form">
+				<input type="text" id="log_subscribe_form_firstName" placeholder="Prénom"></input>
+				<input type="text" id="log_subscribe_form_lastName" placeholder="Nom"></input>
+				<input type="text" id="log_subscribe_form_mail" placeholder="e-Mail"></input>
+				<input type="text" id="log_subscribe_form_password" placeholder="Mot de passe"></input>
+				<div id="log_subscribe_form_submit">Inscription</div>
+			</form>
+			<div id="log_subscribe_toConnect">Se connecter</div>
+			<div id="log_subscribe_loading"><i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i></div>
+		</div>
+
+
+
+	</div>
+
+	<div id="app">
+
+		<div id="general">
+			<div id="general_leftSnippet" class="general_snippet">
+				<div id="general_leftSnippet_bigButton" class="general_snippet_bigButton"></div>
+				<div id="general_leftSnippet_elements" class="rotate-90left">
+					<div id="general_leftSnippet_profile" class="general_snippet_element">
+						<i class="fa fa-cog" aria-hidden="true"></i>
+					</div>
+					<div id="general_leftSnippet_friends" class="general_snippet_element">
+						<i class="fa fa-users" aria-hidden="true"></i>
+					</div>
+					<div id="general_leftSnippet_bets" class="general_snippet_element">
+						<i class="fa fa-hourglass" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+			<div id="general_rightSnippet" class="general_snippet"> 
+				<div id="general_rightSnippet_bigButton" class="general_snippet_bigButton"></div>
+				<div id="general_rightSnippet_elements" class="rotate90right">
+					<div id="general_rightSnippet_video" class="general_snippet_element">
+						<i class="fa fa-video-camera" aria-hidden="true"></i>
+					</div>
+					<div id="general_rightSnippet_mic" class="general_snippet_element">
+						<i class="fa fa-microphone" aria-hidden="true"></i>
+					</div>
+					<div id="general_rightSnippet_file" class="general_snippet_element">
+						<i class="fa fa-plus" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+			<div id="general_swipeShow">
+				<div id="general_swipeShow_blackFilter"></div>
+				<div class="general_swipeShow_element CSSSlideForGeneralElements">
+					<video poster="img/loading.png" class="general_swipeShow_element_content"></video>
+					<div class="general_swipeShow_element_presText">Aboie ou pas 0 ?</div>
+					<div class="general_swipeShow_element_comments">
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="general_swipeShow_element CSSSlideForGeneralElements">
+					<video poster="img/loading.png" class="general_swipeShow_element_content"></video>
+					<div class="general_swipeShow_element_presText">Aboie ou pas 1 ?</div>
+					<div class="general_swipeShow_element_comments">
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="general_swipeShow_element CSSSlideForGeneralElements">
+					<video poster="img/loading.png" class="general_swipeShow_element_content"></video>
+					<div class="general_swipeShow_element_presText">Aboie ou pas 2 ?</div>
+					<div class="general_swipeShow_element_comments">
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="general_swipeShow_element CSSSlideForGeneralElements">
+					<video poster="img/loading.png" class="general_swipeShow_element_content"></video>
+					<div class="general_swipeShow_element_presText">Aboie ou pas 3 ?</div>
+					<div class="general_swipeShow_element_comments">
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="general_swipeShow_element CSSSlideForGeneralElements">
+					<video poster="img/loading.png" class="general_swipeShow_element_content"></video>
+					<div class="general_swipeShow_element_presText">Aboie ou pas 4 ?</div>
+					<div class="general_swipeShow_element_comments">
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="general_swipeShow_element CSSSlideForGeneralElements">
+					<video poster="img/loading.png" class="general_swipeShow_element_content"></video>
+					<div class="general_swipeShow_element_presText">Aboie ou pas 4 ?</div>
+					<div class="general_swipeShow_element_comments">
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="general_swipeShow_element CSSSlideForGeneralElements">
+					<video poster="img/loading.png" class="general_swipeShow_element_content"></video>
+					<div class="general_swipeShow_element_presText">Aboie ou pas 5 ?</div>
+					<div class="general_swipeShow_element_comments">
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="general_swipeShow_element CSSSlideForGeneralElements">
+					<video poster="img/loading.png" class="general_swipeShow_element_content"></video>
+					<div class="general_swipeShow_element_presText">Aboie ou pas 6 ?</div>
+					<div class="general_swipeShow_element_comments">
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="general_swipeShow_element CSSSlideForGeneralElements">
+					<video poster="img/loading.png" class="general_swipeShow_element_content"></video>
+					<div class="general_swipeShow_element_presText">Aboie ou pas 7 ?</div>
+					<div class="general_swipeShow_element_comments">
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="general_swipeShow_element CSSSlideForGeneralElements">
+					<video poster="img/loading.png" class="general_swipeShow_element_content"></video>
+					<div class="general_swipeShow_element_presText">Aboie ou pas 8 ?</div>
+					<div class="general_swipeShow_element_comments">
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="general_swipeShow_element CSSSlideForGeneralElements">
+					<video poster="img/loading.png" class="general_swipeShow_element_content"></video>
+					<div class="general_swipeShow_element_presText">Aboie ou pas 9 ?</div>
+					<div class="general_swipeShow_element_comments">
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="general_swipeShow_element CSSSlideForGeneralElements">
+					<video poster="img/loading.png" class="general_swipeShow_element_content"></video>
+					<div class="general_swipeShow_element_presText">Aboie ou pas 10 ?</div>
+					<div class="general_swipeShow_element_comments">
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment CSSSlideForComments">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+
+		<div id="commentForm">
+			<div id="commentForm_head">
+				<i class="fa fa-caret-down" aria-hidden="true"></i>
+			</div>
+			<div id="commentForm_comments">
+				<div class="commentForm_comment">
+					<div class="commentForm_comment_avatar">
+						<img src="img/avatar.jpg" alt="avatar">
+					</div>
+					<div class="commentForm_comment_infos">
+						<div class="commentForm_comment_infos_who"></div>
+						<div class="commentForm_comment_infos_time"></div>
+					</div>
+					<div class="commentForm_comment_text">
+					</div>
+					<a href="#" class="commentForm_comment_heroLink"><i class="fa fa-trophy"></i>Heroic </a>
+					<a href="#" class="commentForm_comment_liarLink"><i class="fa fa-hand-lizard-o"></i> Liar</a>
+				</div>
+			</div>
+			<form id="commentForm_form">
+				<textarea id="commentForm_form_input" placeholder="Commentez..."></textarea>
+			</form>
+			<div id="commentForm_submitButton"><i class="fa fa-share" aria-hidden="true"></i></div>
+		</div>
+
+		<div id="profile" class="rotate90left">
+			<div id="profile_shadow"></div>
+			<div id="profile_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+			<div id="profile_options"><i class="fa fa-cog" aria-hidden="true"></i></div>
+			<div id="profile_avatarFormModalShade"></div>
+			<form enctype="multipart/form-data" method="POST" id="profile_avatarForm">
+				<div id="profile_avatarForm_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+				<label for="profile_avatarForm_input" id="profile_avatarForm_label">Choisir une photo</label>
+				<input type="file" id="profile_avatarForm_input" name="avatar" required>
+				<div id="profile_avatarForm_preview"></div>
+				<input type="submit" id="profile_avatarForm_submit" value="Uploader" disabled="disabled">
+			</form>
+			<div id="profile_cover"></div>
+			<div id="profile_avatar">
+				<img src="img/avatar.jpg" alt="avatar">
+			</div>
+			<div id="profile_name">Daniel Saadia</div>
+			<div id="profile_bets">
+				<div class="profile_bet">
+					<div class="profile_bet_infos">Il y a 3j</div>
+					<div class="profile_bet_title">Saut en parachute</div>
+					<div class="profile_bet_proof"><img src="img/saut-en-parachute.jpg" alt="proof"></div>
+					<div class="profile_bet_likeLinks">
+						<a href="#" class="profile_bet_likeLinks_heroLink">
+							<i class="fa fa-trophy"></i>
+						</a>
+						<a href="#" class="profile_bet_likeLinks_liarLink">
+							<i class="fa fa-hand-lizard-o"></i>
+						</a>
+					</div>
+				</div>
+				<div class="profile_bet">
+					<div class="profile_bet_infos">Il y a 3j</div>
+					<div class="profile_bet_title">Saut en parachute</div>
+					<div class="profile_bet_proof"><img src="img/saut-en-parachute.jpg" alt="proof"></div>
+					<div class="profile_bet_likeLinks">
+						<a href="#" class="profile_bet_likeLinks_heroLink">
+							<i class="fa fa-trophy"></i>
+						</a>
+						<a href="#" class="profile_bet_likeLinks_liarLink">
+							<i class="fa fa-hand-lizard-o"></i>
+						</a>
+					</div>
+				</div>
+				<div class="profile_bet">
+					<div class="profile_bet_infos">Il y a 3j</div>
+					<div class="profile_bet_title">Saut en parachute</div>
+					<div class="profile_bet_proof"><img src="img/saut-en-parachute.jpg" alt="proof"></div>
+					<div class="profile_bet_likeLinks">
+						<a href="#" class="profile_bet_likeLinks_heroLink">
+							<i class="fa fa-trophy"></i>
+						</a>
+						<a href="#" class="profile_bet_likeLinks_liarLink">
+							<i class="fa fa-hand-lizard-o"></i>
+						</a>
+					</div>
+				</div>
+				<div class="profile_bet">
+					<div class="profile_bet_infos">Il y a 3j</div>
+					<div class="profile_bet_title">Saut en parachute</div>
+					<div class="profile_bet_proof"><img src="img/saut-en-parachute.jpg" alt="proof"></div>
+					<div class="profile_bet_likeLinks">
+						<a href="#" class="profile_bet_likeLinks_heroLink">
+							<i class="fa fa-trophy"></i>
+						</a>
+						<a href="#" class="profile_bet_likeLinks_liarLink">
+							<i class="fa fa-hand-lizard-o"></i>
+						</a>
+					</div>
+				</div>
+			</div>	
+		</div>
+
+		<div id="friends" class="rotate90left">
+			<div id="friends_head">
+				<div id="friends_head_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+			</div>
+			<input id="friends_search" type="text" placeholder="Chercher une personne...">
+			<div id="friends_results">
+				<div class="friends_result">
+					<div class="friends_result_name">Daniel Saadia</div>
+					<div class="friends_result_avatar">
+						<img src="img/defaultAvatar.png" alt="avatar">
+					</div>
+				</div>
+			</div>
+			<div id="friends_profPage" class="leftReplace">
+				<div id="friends_profPage_shadow"></div>
+				<div id="friends_profPage_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+				<div id="friends_profPage_options"><i class="fa fa-cog" aria-hidden="true"></i></div>
+				<div id="friends_profPage_cover"></div>
+				<div id="friends_profPage_avatar">
+					<img src="img/loads/ripple.gif" alt="avatar">
+				</div>
+				<div id="friends_profPage_name">Daniel Saadia</div>
+				<div id="friends_profPage_beFriend">
+					<div id="friends_profPage_beFriend_button">
+						<i class="fa fa-check" aria-hidden="true"></i> 
+						<div id="friends_profPage_beFriend_button_situation">Ami</div>						
+					</div>
+				</div>
+				<div id="friends_profPage_bets">
+					<div class="friends_profPage_bet">
+						<div class="friends_profPage_bet_infos">Il y a 3j</div>
+						<div class="friends_profPage_bet_title">Saut en parachute</div>
+						<div class="friends_profPage_bet_proof"><img src="img/saut-en-parachute.jpg" alt="proof"></div>
+						<div class="friends_profPage_bet_likeLinks">
+							<a href="#" class="friends_profPage_bet_likeLinks_heroLink">
+								<i class="fa fa-trophy"></i>
+							</a>
+							<a href="#" class="friends_profPage_bet_likeLinks_liarLink">
+								<i class="fa fa-hand-lizard-o"></i>
+							</a>
+						</div>
+					</div>
+					<div class="friends_profPage_bet">
+						<div class="friends_profPage_bet_infos">Il y a 3j</div>
+						<div class="friends_profPage_bet_title">Saut en parachute</div>
+						<div class="friends_profPage_bet_proof"><img src="img/saut-en-parachute.jpg" alt="proof"></div>
+						<div class="friends_profPage_bet_likeLinks">
+							<a href="#" class="friends_profPage_bet_likeLinks_heroLink">
+								<i class="fa fa-trophy"></i>
+							</a>
+							<a href="#" class="friends_profPage_bet_likeLinks_liarLink">
+								<i class="fa fa-hand-lizard-o"></i>
+							</a>
+						</div>
+					</div>
+					<div class="friends_profPage_bet">
+						<div class="friends_profPage_bet_infos">Il y a 3j</div>
+						<div class="friends_profPage_bet_title">Saut en parachute</div>
+						<div class="friends_profPage_bet_proof"><img src="img/saut-en-parachute.jpg" alt="proof"></div>
+						<div class="friends_profPage_bet_likeLinks">
+							<a href="#" class="friends_profPage_bet_likeLinks_heroLink">
+								<i class="fa fa-trophy"></i>
+							</a>
+							<a href="#" class="friends_profPage_bet_likeLinks_liarLink">
+								<i class="fa fa-hand-lizard-o"></i>
+							</a>
+						</div>
+					</div>
+					<div class="friends_profPage_bet">
+						<div class="friends_profPage_bet_infos">Il y a 3j</div>
+						<div class="friends_profPage_bet_title">Saut en parachute</div>
+						<div class="friends_profPage_bet_proof"><img src="img/saut-en-parachute.jpg" alt="proof"></div>
+						<div class="friends_profPage_bet_likeLinks">
+							<a href="#" class="friends_profPage_bet_likeLinks_heroLink">
+								<i class="fa fa-trophy"></i>
+							</a>
+							<a href="#" class="friends_profPage_bet_likeLinks_liarLink">
+								<i class="fa fa-hand-lizard-o"></i>
+							</a>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+
+		<div id="bets" class="rotate90left">
+			<div id="bets_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+		</div>
+
+		<div id="videoProof"></div>
+
+		<div id="micProof"></div>
+
+		<div id="fileProof" class="rotate-90right">
+			<div id="fileProof_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+			<div id="fileProof_title">Ajouter une preuve</div>
+			<form enctype="multipart/form-data" method="POST" id="fileProof_form">
+				<label for="fileProof_form_betInput" id="fileProof_form_betInputLabel">Paris en cours :</label>
+				<div id="fileProof_form_betChoice">
+					<div id="fileProof_form_betChoice_betName">Lorem</div>
+					<div id="fileProof_form_betChoice_betImage">
+						<img src="img/promoGroup.jpg" alt="betImage">
+					</div>
+				</div>
+				<div id="fileProof_form_betModal" class="rightReplace">
+					<div id="fileProof_form_betModal_close"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+					<input type="text" name="betSearch" id="fileProof_form_betModal_search" placeholder="Chercher un pari..."></input>
+					<div id="fileProof_form_betModal_betResultsLoader">
+						<img src="img/loads/ripple.gif" alt="betImage">
+					</div>
+					<div id="fileProof_form_betModal_betResults">
+						<div class="fileProof_form_betModal_betResult">
+							<div class="fileProof_form_betModal_betResult_name">
+								<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+							</div>
+							<div class="fileProof_form_betModal_betResult_time">
+								<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+							</div>
+							<div class="fileProof_form_betModal_betResult_players">
+								<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+							</div>
+							<div class="fileProof_form_betModal_betResult_image">
+								<img src="img/loads/ring.gif" alt="betImage">
+							</div>
+						</div>
+					</div>
+				</div>
+				<input type="text" name="bet" id="fileProof_form_betInput" value="Grumpy" required></input>
+				<label for="fileProof_form_proofInput" id="fileProof_form_proofInputLabel">Choisir une preuve</label>
+				<input type="file" id="fileProof_form_proofInput" name="proof" accept="image/*,video/*" required></input>
+				<div id="fileProof_form_preview">
+					<input type="text" id="fileProof_form_preview_presTextInput" placeholder="Hello"></input>
+					<video poster="img/loading.png" id="fileProof_form_preview_video"></video>
+					<img id="fileProof_form_preview_image"></img>
+				</div>
+				<div id="fileProof_form_submitButton"><i class="fa fa-share" aria-hidden="true"></i></div>
+				<input type="submit" id="fileProof_form_submit" disabled="disabled"></input>
+			</form>
+		</div>
+
+	</div>
+
+	    <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/functionsAndClasses.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,26 @@
+
+
+$orange-enerve : #FF962E;
+$orange-clair:  #FFA24D;
+$orange-fonce:  #BF4100;
+$orange-pastel: #FFD7AB;
+
+$gris-0 : #FAFAFA;
+$gris-1 : rgb(242,242,242);
+$gris-2 : rgb(230,230,230);
+$gris-moyen-clair: #BFBCB8;
+$gris: #7F7E7A;
+$gris-moyen-fonce: #403F3D;
+$gris-tres-fonce: #313133;
+
+
+$bleu-clair:  #3C80D2;
+$bleu-fonce: #004778;
+$bleu-pastel: #C3DAE2;
+$bleu-gris : #9EC8CC;
+
+$sable-moyen-sombre : #cebd9f;
+$sable-tres-sombre : #b79e73;
+$sable : #f0e3cc;
+$sable-moyen-clair : #f2eadc;
+$sable-tres-clair : #f9f5ed;

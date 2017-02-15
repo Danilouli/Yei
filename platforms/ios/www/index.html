@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Security-Policy"/>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="css/icomoon-search.css">
+        <link rel="stylesheet" type="text/css" href="css/animations.css">
+        <link rel="stylesheet" type="text/css" href="css/app.css">
+        <title>Hello World</title>
+    </head>
+    <body>
+
+    <div id="loadCircle"><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i></div>
+	<div id="heightHelper"></div>
+	<div id="responsiveFormsHelper"></div>
+	<div id="app">
+
+		<div id="general">
+			<div id="general_leftSnippet" class="general_snippet">
+				<div id="general_leftSnippet_bigButton" class="general_snippet_bigButton"></div>
+				<div id="general_leftSnippet_elements" class="rotate-90left">
+					<div id="general_leftSnippet_profile" class="general_snippet_element">
+						<i class="fa fa-cog" aria-hidden="true"></i>
+					</div>
+					<div id="general_leftSnippet_options" class="general_snippet_element">
+						<i class="fa fa-users" aria-hidden="true"></i>
+					</div>
+					<div id="general_leftSnippet_bets" class="general_snippet_element">
+						<i class="fa fa-hourglass" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+			<div id="general_rightSnippet" class="general_snippet"> 
+				<div id="general_rightSnippet_bigButton" class="general_snippet_bigButton"></div>
+				<div id="general_rightSnippet_elements" class="rotate90right">
+					<div id="general_rightSnippet_video" class="general_snippet_element">
+						<i class="fa fa-video-camera" aria-hidden="true"></i>
+					</div>
+					<div id="general_rightSnippet_mic" class="general_snippet_element">
+						<i class="fa fa-microphone" aria-hidden="true"></i>
+					</div>
+					<div id="general_rightSnippet_file" class="general_snippet_element">
+						<i class="fa fa-plus" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+			<div id="general_swipeShow">
+				<div id="general_swipeShow_blackFilter"></div>
+				<div class="general_swipeShow_element">
+					<div class="general_swipeShow_element_presText">Aboie ou pas 0 ?</div>
+					<video src="img/testVideo.mp4" class="general_swipeShow_element_content"></video>
+					<div class="general_swipeShow_element_comments">
+						<div class="general_swipeShow_element_comment JSAnimated">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis delectus, saepe debitis id illo eligendi dolores eveniet. Sapiente neque nihil, sint doloremque, fuga maiores voluptatem atque quos unde laborum, numquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, cupiditate quidem ipsa? Eveniet optio nulla ab, ut fugiat voluptate, quibusdam blanditiis totam minus rerum beatae voluptatibus eaque natus aliquid, fuga?
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment JSAnimated">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias laudantium nihil molestias quia quisquam minus, facere nostrum dolore aliquam, voluptatum quod quaerat, nesciunt. Saepe suscipit, doloribus minus quas veniam ut! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, enim non. Veritatis ipsam ea quisquam esse delectus mollitia enim, sapiente rem nulla ullam. Doloremque nemo quod et illo, accusamus a.
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment JSAnimated">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+								Lorem ipsum dolor sit amet ?
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment JSAnimated">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ea iure sint itaque consequuntur quas amet obcaecati neque ad nam enim eius, ipsa a necessitatibus voluptatum, illum accusamus dicta. Ex? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum vitae ea, rem debitis iusto labore! Laborum voluptatum officia, blanditiis repudiandae architecto ea repellat provident, soluta deleniti eaque unde quis accusantium!
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment JSAnimated">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus odit id !! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod qui tempora, unde, esse sit architecto, aut dicta ipsam officia expedita ducimus neque totam! Recusandae laborum, rerum ut laudantium consectetur eligendi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde assumenda, quae quas ut dicta enim recusandae totam, dolorem optio commodi, harum. Perferendis inventore quidem aspernatur nobis numquam nam saepe. Sed. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ex fugiat alias neque eos unde, pariatur libero voluptates et officia, maiores, ea possimus perspiciatis nisi id consequuntur provident laboriosam. Reprehenderit?
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="general_swipeShow_element">
+					<div class="general_swipeShow_element_presText">Aboie ou pas 1 ?</div>
+					<video src="img/testVideo.mp4" id="testVid" class="general_swipeShow_element_content"></video>
+					<div class="general_swipeShow_element_comments">
+						<div class="general_swipeShow_element_comment JSAnimated">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis delectus, saepe debitis id illo eligendi dolores eveniet. Sapiente neque nihil, sint doloremque, fuga maiores voluptatem atque quos unde laborum, numquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, cupiditate quidem ipsa? Eveniet optio nulla ab, ut fugiat voluptate, quibusdam blanditiis totam minus rerum beatae voluptatibus eaque natus aliquid, fuga?
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment JSAnimated">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias laudantium nihil molestias quia quisquam minus, facere nostrum dolore aliquam, voluptatum quod quaerat, nesciunt. Saepe suscipit, doloribus minus quas veniam ut! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, enim non. Veritatis ipsam ea quisquam esse delectus mollitia enim, sapiente rem nulla ullam. Doloremque nemo quod et illo, accusamus a.
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment JSAnimated">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+								Lorem ipsum dolor sit amet ?
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment JSAnimated">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ea iure sint itaque consequuntur quas amet obcaecati neque ad nam enim eius, ipsa a necessitatibus voluptatum, illum accusamus dicta. Ex? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum vitae ea, rem debitis iusto labore! Laborum voluptatum officia, blanditiis repudiandae architecto ea repellat provident, soluta deleniti eaque unde quis accusantium!
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment JSAnimated">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus odit id !! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod qui tempora, unde, esse sit architecto, aut dicta ipsam officia expedita ducimus neque totam! Recusandae laborum, rerum ut laudantium consectetur eligendi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde assumenda, quae quas ut dicta enim recusandae totam, dolorem optio commodi, harum. Perferendis inventore quidem aspernatur nobis numquam nam saepe. Sed. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ex fugiat alias neque eos unde, pariatur libero voluptates et officia, maiores, ea possimus perspiciatis nisi id consequuntur provident laboriosam. Reprehenderit?
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="general_swipeShow_element">
+					<div class="general_swipeShow_element_presText">Aboie ou pas 2 ?</div>
+					<video src="img/testVideo.mp4" id="testVid" class="general_swipeShow_element_content"></video>
+					<div class="general_swipeShow_element_comments">
+						<div class="general_swipeShow_element_comment JSAnimated">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis delectus, saepe debitis id illo eligendi dolores eveniet. Sapiente neque nihil, sint doloremque, fuga maiores voluptatem atque quos unde laborum, numquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, cupiditate quidem ipsa? Eveniet optio nulla ab, ut fugiat voluptate, quibusdam blanditiis totam minus rerum beatae voluptatibus eaque natus aliquid, fuga?
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment JSAnimated">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias laudantium nihil molestias quia quisquam minus, facere nostrum dolore aliquam, voluptatum quod quaerat, nesciunt. Saepe suscipit, doloribus minus quas veniam ut! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, enim non. Veritatis ipsam ea quisquam esse delectus mollitia enim, sapiente rem nulla ullam. Doloremque nemo quod et illo, accusamus a.
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment JSAnimated">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+								Lorem ipsum dolor sit amet ?
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment JSAnimated">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ea iure sint itaque consequuntur quas amet obcaecati neque ad nam enim eius, ipsa a necessitatibus voluptatum, illum accusamus dicta. Ex? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum vitae ea, rem debitis iusto labore! Laborum voluptatum officia, blanditiis repudiandae architecto ea repellat provident, soluta deleniti eaque unde quis accusantium!
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment JSAnimated">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus odit id !! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod qui tempora, unde, esse sit architecto, aut dicta ipsam officia expedita ducimus neque totam! Recusandae laborum, rerum ut laudantium consectetur eligendi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde assumenda, quae quas ut dicta enim recusandae totam, dolorem optio commodi, harum. Perferendis inventore quidem aspernatur nobis numquam nam saepe. Sed. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ex fugiat alias neque eos unde, pariatur libero voluptates et officia, maiores, ea possimus perspiciatis nisi id consequuntur provident laboriosam. Reprehenderit?
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="general_swipeShow_element">
+					<div class="general_swipeShow_element_presText">Aboie ou pas 3 ?</div>
+					<video src="img/testVideo.mp4" id="testVid" class="general_swipeShow_element_content"></video>
+					<div class="general_swipeShow_element_comments">
+						<div class="general_swipeShow_element_comment JSAnimated">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis delectus, saepe debitis id illo eligendi dolores eveniet. Sapiente neque nihil, sint doloremque, fuga maiores voluptatem atque quos unde laborum, numquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, cupiditate quidem ipsa? Eveniet optio nulla ab, ut fugiat voluptate, quibusdam blanditiis totam minus rerum beatae voluptatibus eaque natus aliquid, fuga?
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment JSAnimated">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias laudantium nihil molestias quia quisquam minus, facere nostrum dolore aliquam, voluptatum quod quaerat, nesciunt. Saepe suscipit, doloribus minus quas veniam ut! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, enim non. Veritatis ipsam ea quisquam esse delectus mollitia enim, sapiente rem nulla ullam. Doloremque nemo quod et illo, accusamus a.
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment JSAnimated">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+								Lorem ipsum dolor sit amet ?
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment JSAnimated">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ea iure sint itaque consequuntur quas amet obcaecati neque ad nam enim eius, ipsa a necessitatibus voluptatum, illum accusamus dicta. Ex? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum vitae ea, rem debitis iusto labore! Laborum voluptatum officia, blanditiis repudiandae architecto ea repellat provident, soluta deleniti eaque unde quis accusantium!
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment JSAnimated">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus odit id !! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod qui tempora, unde, esse sit architecto, aut dicta ipsam officia expedita ducimus neque totam! Recusandae laborum, rerum ut laudantium consectetur eligendi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde assumenda, quae quas ut dicta enim recusandae totam, dolorem optio commodi, harum. Perferendis inventore quidem aspernatur nobis numquam nam saepe. Sed. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ex fugiat alias neque eos unde, pariatur libero voluptates et officia, maiores, ea possimus perspiciatis nisi id consequuntur provident laboriosam. Reprehenderit?
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="general_swipeShow_element">
+					<div class="general_swipeShow_element_presText">Aboie ou pas 4 ?</div>
+					<video src="img/testVideo.mp4" id="testVid" class="general_swipeShow_element_content"></video>
+					<div class="general_swipeShow_element_comments">
+						<div class="general_swipeShow_element_comment JSAnimated">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis delectus, saepe debitis id illo eligendi dolores eveniet. Sapiente neque nihil, sint doloremque, fuga maiores voluptatem atque quos unde laborum, numquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, cupiditate quidem ipsa? Eveniet optio nulla ab, ut fugiat voluptate, quibusdam blanditiis totam minus rerum beatae voluptatibus eaque natus aliquid, fuga?
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment JSAnimated">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias laudantium nihil molestias quia quisquam minus, facere nostrum dolore aliquam, voluptatum quod quaerat, nesciunt. Saepe suscipit, doloribus minus quas veniam ut! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, enim non. Veritatis ipsam ea quisquam esse delectus mollitia enim, sapiente rem nulla ullam. Doloremque nemo quod et illo, accusamus a.
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment JSAnimated">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+								Lorem ipsum dolor sit amet ?
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment JSAnimated">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ea iure sint itaque consequuntur quas amet obcaecati neque ad nam enim eius, ipsa a necessitatibus voluptatum, illum accusamus dicta. Ex? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum vitae ea, rem debitis iusto labore! Laborum voluptatum officia, blanditiis repudiandae architecto ea repellat provident, soluta deleniti eaque unde quis accusantium!
+							</div>
+						</div>
+						<div class="general_swipeShow_element_comment JSAnimated">
+							<div class="general_swipeShow_element_comment_avatar">
+								<img src="img/avatar.jpg" alt="avatar">
+							</div>
+							<div class="general_swipeShow_element_comment_text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus odit id !! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod qui tempora, unde, esse sit architecto, aut dicta ipsam officia expedita ducimus neque totam! Recusandae laborum, rerum ut laudantium consectetur eligendi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde assumenda, quae quas ut dicta enim recusandae totam, dolorem optio commodi, harum. Perferendis inventore quidem aspernatur nobis numquam nam saepe. Sed. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ex fugiat alias neque eos unde, pariatur libero voluptates et officia, maiores, ea possimus perspiciatis nisi id consequuntur provident laboriosam. Reprehenderit?
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+
+		<div id="commentForm">
+			<div id="commentForm_head">
+				<i class="fa fa-caret-down" aria-hidden="true"></i>
+			</div>
+			<div id="commentForm_comments">
+				<div class="commentForm_comment">
+					<div class="commentForm_comment_avatar">
+						<img src="img/avatar.jpg" alt="avatar">
+					</div>
+					<div class="commentForm_comment_infos">
+						<div class="commentForm_comment_infos_who">Danilouli</div>
+						<div class="commentForm_comment_infos_time">Il y a 4h</div>
+					</div>
+					<div class="commentForm_comment_text">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis alias voluptate, deleniti dolore itaque quidem, non odit architecto fugit sint tenetur optio repudiandae possimus laborum minima inventore, illum dolor pariatur.
+					</div>
+					<a href="#" class="commentForm_comment_heroLink"><i class="fa fa-trophy"></i>Heroic (141)</a>
+					<a href="#" class="commentForm_comment_liarLink"><i class="fa fa-hand-lizard-o"></i> Liar</a>
+				</div>
+				<div class="commentForm_comment">
+					<div class="commentForm_comment_avatar">
+						<img src="img/avatar.jpg" alt="avatar">
+					</div>
+					<div class="commentForm_comment_infos">
+						<div class="commentForm_comment_infos_who">Danilouli</div>
+						<div class="commentForm_comment_infos_time">Il y a 4h</div>
+					</div>
+					<div class="commentForm_comment_text">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis alias voluptate, deleniti dolore itaque quidem, non odit architecto fugit sint tenetur optio repudiandae possimus laborum minima inventore, illum dolor pariatur.
+					</div>
+					<a href="#" class="commentForm_comment_heroLink"><i class="fa fa-trophy"></i>Heroic (141)</a>
+					<a href="#" class="commentForm_comment_liarLink"><i class="fa fa-hand-lizard-o"></i> Liar</a>
+				</div>
+				<div class="commentForm_comment">
+					<div class="commentForm_comment_avatar">
+						<img src="img/avatar.jpg" alt="avatar">
+					</div>
+					<div class="commentForm_comment_infos">
+						<div class="commentForm_comment_infos_who">Danilouli</div>
+						<div class="commentForm_comment_infos_time">Il y a 4h</div>
+					</div>
+					<div class="commentForm_comment_text">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis alias voluptate, deleniti dolore itaque quidem, non odit architecto fugit sint tenetur optio repudiandae possimus laborum minima inventore, illum dolor pariatur.
+					</div>
+					<a href="#" class="commentForm_comment_heroLink"><i class="fa fa-trophy"></i>Heroic (141)</a>
+					<a href="#" class="commentForm_comment_liarLink"><i class="fa fa-hand-lizard-o"></i> Liar</a>
+				</div>
+				<div class="commentForm_comment">
+					<div class="commentForm_comment_avatar">
+						<img src="img/avatar.jpg" alt="avatar">
+					</div>
+					<div class="commentForm_comment_infos">
+						<div class="commentForm_comment_infos_who">Danilouli</div>
+						<div class="commentForm_comment_infos_time">Il y a 4h</div>
+					</div>
+					<div class="commentForm_comment_text">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis alias voluptate, deleniti dolore itaque quidem, non odit architecto fugit sint tenetur optio repudiandae possimus laborum minima inventore, illum dolor pariatur.
+					</div>
+					<a href="#" class="commentForm_comment_heroLink"><i class="fa fa-trophy"></i>Heroic (141)</a>
+					<a href="#" class="commentForm_comment_liarLink"><i class="fa fa-hand-lizard-o"></i> Liar</a>
+				</div>
+				<div class="commentForm_comment">
+					<div class="commentForm_comment_avatar">
+						<img src="img/avatar.jpg" alt="avatar">
+					</div>
+					<div class="commentForm_comment_infos">
+						<div class="commentForm_comment_infos_who">Danilouli</div>
+						<div class="commentForm_comment_infos_time">Il y a 4h</div>
+					</div>
+					<div class="commentForm_comment_text">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis alias voluptate, deleniti dolore itaque quidem, non odit architecto fugit sint tenetur optio repudiandae possimus laborum minima inventore, illum dolor pariatur.
+					</div>
+					<a href="#" class="commentForm_comment_heroLink"><i class="fa fa-trophy"></i>Heroic (141)</a>
+					<a href="#" class="commentForm_comment_liarLink"><i class="fa fa-hand-lizard-o"></i> Liar</a>
+				</div>
+				<div class="commentForm_comment">
+					<div class="commentForm_comment_avatar">
+						<img src="img/avatar.jpg" alt="avatar">
+					</div>
+					<div class="commentForm_comment_infos">
+						<div class="commentForm_comment_infos_who">Danilouli</div>
+						<div class="commentForm_comment_infos_time">Il y a 4h</div>
+					</div>
+					<div class="commentForm_comment_text">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis alias voluptate, deleniti dolore itaque quidem, non odit architecto fugit sint tenetur optio repudiandae possimus laborum minima inventore, illum dolor pariatur.
+					</div>
+					<a href="#" class="commentForm_comment_heroLink"><i class="fa fa-trophy"></i>Heroic (141)</a>
+					<a href="#" class="commentForm_comment_liarLink"><i class="fa fa-hand-lizard-o"></i> Liar</a>
+				</div>
+				<div class="commentForm_comment">
+					<div class="commentForm_comment_avatar">
+						<img src="img/avatar.jpg" alt="avatar">
+					</div>
+					<div class="commentForm_comment_infos">
+						<div class="commentForm_comment_infos_who">Danilouli</div>
+						<div class="commentForm_comment_infos_time">Il y a 4h</div>
+					</div>
+					<div class="commentForm_comment_text">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis alias voluptate, deleniti dolore itaque quidem, non odit architecto fugit sint tenetur optio repudiandae possimus laborum minima inventore, illum dolor pariatur.
+					</div>
+					<a href="#" class="commentForm_comment_heroLink"><i class="fa fa-trophy"></i>Heroic (141)</a>
+					<a href="#" class="commentForm_comment_liarLink"><i class="fa fa-hand-lizard-o"></i> Liar</a>
+				</div>
+				<div class="commentForm_comment">
+					<div class="commentForm_comment_avatar">
+						<img src="img/avatar.jpg" alt="avatar">
+					</div>
+					<div class="commentForm_comment_infos">
+						<div class="commentForm_comment_infos_who">Danilouli</div>
+						<div class="commentForm_comment_infos_time">Il y a 4h</div>
+					</div>
+					<div class="commentForm_comment_text">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis alias voluptate, deleniti dolore itaque quidem, non odit architecto fugit sint tenetur optio repudiandae possimus laborum minima inventore, illum dolor pariatur.
+					</div>
+					<a href="#" class="commentForm_comment_heroLink"><i class="fa fa-trophy"></i>Heroic (141)</a>
+					<a href="#" class="commentForm_comment_liarLink"><i class="fa fa-hand-lizard-o"></i> Liar</a>
+				</div>
+			</div>
+			<form id="commentForm_form" action="#">
+				<textarea id="commentForm_form_input" placeholder="Commentez..."></textarea>
+				<input type="submit" id="commentForm_form_submit" value="" disabled="disabled">
+			</form>
+			<div id="commentForm_submitButton"><i class="fa fa-share" aria-hidden="true"></i></div>
+		</div>
+
+		<div id="profile" class="rotatePanelDisappear90left">
+			<div id="profile_shadow"></div>
+			<div id="profile_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+			<div id="profile_options"><i class="fa fa-cog" aria-hidden="true"></i></div>
+			<div id="profile_cover"></div>
+			<div id="profile_avatar">
+				<img src="img/avatar.jpg" alt="avatar">
+			</div>
+			<div id="profile_name">Daniel Saadia</div>
+			<div id="profile_bets">
+				<div class="profile_bet">
+					<div class="profile_bet_infos">Il y a 3j</div>
+					<div class="profile_bet_title">Saut en parachute</div>
+					<div class="profile_bet_proof"><img src="img/saut-en-parachute.jpg" alt="proof"></div>
+					<div class="profile_bet_likeLinks">
+						<a href="#" class="profile_bet_likeLinks_heroLink">
+							<i class="fa fa-trophy"></i>
+						</a>
+						<a href="#" class="profile_bet_likeLinks_liarLink">
+							<i class="fa fa-hand-lizard-o"></i>
+						</a>
+					</div>
+				</div>
+				<div class="profile_bet">
+					<div class="profile_bet_infos">Il y a 3j</div>
+					<div class="profile_bet_title">Saut en parachute</div>
+					<div class="profile_bet_proof"><img src="img/saut-en-parachute.jpg" alt="proof"></div>
+					<div class="profile_bet_likeLinks">
+						<a href="#" class="profile_bet_likeLinks_heroLink">
+							<i class="fa fa-trophy"></i>
+						</a>
+						<a href="#" class="profile_bet_likeLinks_liarLink">
+							<i class="fa fa-hand-lizard-o"></i>
+						</a>
+					</div>
+				</div>
+				<div class="profile_bet">
+					<div class="profile_bet_infos">Il y a 3j</div>
+					<div class="profile_bet_title">Saut en parachute</div>
+					<div class="profile_bet_proof"><img src="img/saut-en-parachute.jpg" alt="proof"></div>
+					<div class="profile_bet_likeLinks">
+						<a href="#" class="profile_bet_likeLinks_heroLink">
+							<i class="fa fa-trophy"></i>
+						</a>
+						<a href="#" class="profile_bet_likeLinks_liarLink">
+							<i class="fa fa-hand-lizard-o"></i>
+						</a>
+					</div>
+				</div>
+				<div class="profile_bet">
+					<div class="profile_bet_infos">Il y a 3j</div>
+					<div class="profile_bet_title">Saut en parachute</div>
+					<div class="profile_bet_proof"><img src="img/saut-en-parachute.jpg" alt="proof"></div>
+					<div class="profile_bet_likeLinks">
+						<a href="#" class="profile_bet_likeLinks_heroLink">
+							<i class="fa fa-trophy"></i>
+						</a>
+						<a href="#" class="profile_bet_likeLinks_liarLink">
+							<i class="fa fa-hand-lizard-o"></i>
+						</a>
+					</div>
+				</div>
+			</div>	
+		</div>
+
+		<div id="options" class="rotatePanelDisappear90left">
+			<div id="options_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+		</div>
+
+		<div id="bets" class="rotatePanelDisappear90left">
+			<div id="bets_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+		</div>
+
+	</div>
+
+
+	    <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jsClasses.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+
+    </body>
+</html>

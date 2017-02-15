@@ -1,0 +1,1647 @@
+/*Importation des polices et autres reglages*/
+
+	@font-face { font-family: "BebasNeueBold"; 	src: url('../fonts/BebasNeue/BebasNeueBold.ttf'); }
+	@font-face { font-family: "BebasNeueBook"; 	src: url('../fonts/BebasNeue/BebasNeueBook.ttf'); }
+	@font-face { font-family: "BebasNeueLight"; src: url('../fonts/BebasNeue/BebasNeueLight.ttf'); }
+	@font-face { font-family: "BebasNeueRegular"; src: url('../fonts/BebasNeue/BebasNeueRegular.ttf'); }
+	@font-face { font-family: "BebasNeueThin"; 	src: url('../fonts/BebasNeue/BebasNeueThin.ttf'); }
+	@font-face { font-family: "BebasNeue"; 	src: url('../fonts/BebasNeue/BebasNeue.eot'); }
+
+	@font-face { font-family: "SourceSansProBold"; 	src: url('../fonts/sourceSansPro/SourceSansProBold.ttf'); }
+	@font-face { font-family: "SourceSansProLight"; src: url('../fonts/sourceSansPro/SourceSansProLight.ttf'); }
+	@font-face { font-family: "SourceSansProRegular"; src: url('../fonts/sourceSansPro/SourceSansProRegular.ttf'); }
+	@font-face { font-family: "SourceSansProSemibold"; 	src: url('../fonts/sourceSansPro/SourceSansProSemibold.ttf'); }
+
+	* {
+	    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+	}
+
+body {
+    background-attachment:fixed;
+    font-family:'SourceSansProRegular', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+	overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+html { 
+	height: 100%;
+	margin: 0px;
+	overflow: hidden;
+}
+
+input:focus {
+	outline: none;
+}
+
+#heightHelper {
+	position: absolute;
+	top: 0%;
+	visibility: hidden;
+	left: 0%;
+	word-wrap: break-word;
+}
+
+#loadCircle { 
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	padding-top: calc(50% - 10px);
+	color: rgb(50,50,50);
+	z-index: 10;
+	height: 100%;
+	background-color: rgb(240,240,240);
+}
+
+/*#log*/
+	#log {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		z-index: 100;
+		background: repeating-linear-gradient(
+		50deg,
+		rgb(34,34,34) 15px,
+		rgb(51,51,51) 30px
+		);
+		overflow: hidden;
+	}
+	/*#log_connect*/
+		#log_connect {
+			position: absolute;
+			top: calc(50% - 100px);
+			left: 0%;
+			width: 100%;
+			height: 180px;
+		}
+		/*#log_connect_form*/
+			#log_connect_form {
+				position: absolute;
+				width: 60%;
+				height: 125px;
+				left: 20%;
+			}
+			#log_connect_form input:active, #log_connect_form input:focus {
+				outline: none;
+			}
+			#log_connect_form input[type="text"] {
+				position: relative;
+				height: 25px;
+				width: 100%;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				padding-top: 5px;
+				padding-bottom: 5px;
+				padding-left: 7.5px;
+				padding-right: 7.5px;
+				font-size: 15px;
+				border-radius: 10px 10px 10px 10px;
+				border: none;
+				letter-spacing: 1px;
+			}
+			/*#log_connect_form_submit*/
+				#log_connect_form_submit {
+					position: relative;
+					height: 15px;
+					margin-top: 10px;
+					font-size: 15px;
+					width: 60%;
+					margin-left: 20%;
+					margin-right: 20%;
+					text-align: center;
+					background-color: rgb(18,176,178);
+					border-radius: 10px 10px 10px 10px;
+					border : solid 3px rgb(11,113,115);
+					letter-spacing: 1px;
+					padding-top: 5px;
+					padding-bottom: 5px;
+					color: rgb(240,240,240);
+				}
+				#log_connect_form_submit:active {
+					background-color: rgb(24,239,242);
+				}
+		/*#log_connect_toSubscribe*/
+			#log_connect_toSubscribe {
+				position: absolute;
+				bottom: -5px;
+				width: 15%;
+				left: 42.5%;
+				text-align: center;
+				font-size: 15px;
+				color: rgb(18,176,178);
+			}
+			#log_connect_toSubscribe:active {
+				color: rgb(24,239,242);
+			}
+		/*#log_connect_loading*/
+			#log_connect_loading {
+				position: absolute;
+				bottom: -80px;
+				width: 100%;
+				text-align: center;
+				color: rgb(18,176,178); 
+				font-size: 15px;
+				visibility: hidden;
+			}
+	/*#log_subscribe*/
+		#log_subscribe {
+			position: absolute;
+			top: calc(50% - 150px);
+			left: 100%;
+			width: 100%;
+			height: 290px;
+		}
+		/*#log_subscribe_form*/
+			#log_subscribe_form {
+				position: absolute;
+				width: 60%;
+				height: 225px;
+				left: 20%;
+			}
+			#log_subscribe_form input:active, #log_subscribe_form input:focus {
+				outline: none;
+			}
+			#log_subscribe_form input[type="text"] {
+				position: relative;
+				height: 25px;
+				width: 100%;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				padding-top: 5px;
+				padding-bottom: 5px;
+				padding-left: 7.5px;
+				padding-right: 7.5px;
+				font-size: 15px;
+				border-radius: 10px 10px 10px 10px;
+				border: none;
+				letter-spacing: 1px;
+			}
+			/*#log_subscribe_form_submit*/
+				#log_subscribe_form_submit {
+					position: relative;
+					height: 15px;
+					margin-top: 10px;
+					font-size: 15px;
+					width: 60%;
+					margin-left: 20%;
+					margin-right: 20%;
+					text-align: center;
+					background-color: rgb(18,176,178);
+					border-radius: 10px 10px 10px 10px;
+					border: none;
+					letter-spacing: 1px;
+					border : solid 3px rgb(11,113,115);
+					padding-top: 5px;
+					padding-bottom: 5px;
+					color: rgb(240,240,240);
+				}
+				#log_subscribe_form_submit:active {
+					background-color: rgb(24,239,242);
+				}
+		/*#log_subscribe_toConnect*/
+			#log_subscribe_toConnect {
+				position: absolute;
+				bottom: 0px;
+				width: 30%;
+				left: 35%;
+				text-align: center;
+				font-size: 15px;
+				color: rgb(18,176,178);
+			}
+			#log_subscribe_toSubscribe:active {
+				color: rgb(24,239,242);
+			}
+		/*#log_subscribe_loading*/
+			#log_subscribe_loading {
+				position: absolute;
+				bottom: -80px;
+				width: 100%;
+				text-align: center;
+				color: rgb(18,176,178); 
+				font-size: 15px;
+				border-style: inset;
+				visibility: hidden;
+			}
+#app { 
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	overflow: hidden;
+	z-index: 0;
+}
+
+/*#general*/
+	#general { 
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+		z-index: 0;
+	}
+	/*#general_swipeShow*/
+		#general_swipeShow { 
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+			background-color: rgb(15,15,15);
+			z-index: 0;
+		}
+			#general_swipeShow_blackFilter { 
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: calc(100% - 80px);
+				width: 100%;
+				overflow: hidden;
+				visibility: hidden;
+				z-index: -100;
+				background-color: rgba(100,100,100,0.3); 
+			}
+		/*.general_swipeShow_element*/ 
+			.general_swipeShow_element { 
+				position: absolute;
+				top: 0%;
+				height: 100%;
+				width: 100%;
+				overflow: hidden;
+				z-index: 0;
+			}
+			.general_swipeShow_element_presText { 
+				position: absolute;
+				bottom: 115px;
+				width: 100%;
+				text-align: center;
+				color: rgb(240,240,240);
+				font-size: 30px;
+				font-family: "BebasNeueRegular";
+				z-index: 10;
+			}
+			.general_swipeShow_element_content { 
+				position: absolute;
+				top: 0%;
+				left: 0%;
+				z-index: 0;
+				width: 100%;
+				height: calc(100% - 80px);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 60px 60px;
+				background-color: rgb(15,15,15);
+			}
+			img.general_swipeShow_element_content { 
+				z-index: 0;
+				width: 100%;
+				height: calc(100% - 80px);
+				object-fit: fill;
+				border: none;
+				position: absolute;
+			}
+			video.general_swipeShow_element_content { 
+				z-index: 0;
+				width: 100%;
+				height: calc(100% - 80px);
+				object-fit: fill;
+				border: none;
+				position: absolute;
+			}
+		/*.general_swipeShow_element_comments*/
+			.general_swipeShow_element_comments { 
+				z-index: 10;
+				position: absolute;
+				width: 100%;
+				height: 80px;
+				top: calc(100% - 80px);
+				background-color: rgb(240,240,240);
+				/*box-shadow: rgb(132,132,132) 0px -1px 0.25px;*/
+				display: inline-block;
+				overflow: hidden;
+				border-top: solid 3px rgb(11,113,115);
+			}
+			/*.general_swipeShow_element_comment*/
+				.general_swipeShow_element_comment { 
+					position: absolute;
+					width: 100%;
+					height: 100%;
+				}
+				/*.general_swipeShow_element_comment_avatar*/
+					.general_swipeShow_element_comment_avatar { 
+						position: absolute;
+						top: 15px;
+						left: 10px;
+						width: 50px;
+						height: 50px;
+						border-radius: 50%;
+						border : solid 1px rgb(11,113,115);
+					}
+					.general_swipeShow_element_comment_avatar img { 
+						height: 50px;
+						width: 50px;
+						border-radius: 50%;
+					}
+				/*general_swipeShow_element_comment_text*/
+					.general_swipeShow_element_comment_text { 
+						position: absolute;
+						width: calc(100% - 80px);
+						left: 70px;
+						height: 80%;
+						line-height: 15px;
+						top: 10%;
+						vertical-align: middle;
+						text-align: left;
+						color: rgb(50,50,50);
+						font-size: 15px;
+						overflow: hidden;
+						word-wrap: break-word;
+						-webkit-box-sizing: border-box;
+					}
+	/*.general_snippet*/
+		.general_snippet { 
+			position: absolute;
+			top: 0px;
+			height: 180px;
+			width: 180px;
+			border: none;
+			z-index: 20;
+		}
+		.general_snippet_bigButton { 
+			position: absolute;
+			top: -25px;
+			height: 75px;
+			width: 75px;
+			z-index: 20;
+			border-radius: 50%;
+			background-color: rgba(230,230,230,0.5);
+			border: solid 3px rgb(18,176,178);
+		}
+		/*.general_snippet_element*/
+			.general_snippet_element { 
+				position: absolute;
+				box-shadow: rgb(50,50,50) 0.5px 0.5px 0.25px;
+				width: 35px;
+				border-radius: 50%;
+				z-index: 20;
+				text-align: center;
+				color: white;
+				border: solid 1px rgb(11,113,115);
+			}
+	/*#general_leftSnippet*/
+		#general_leftSnippet { 
+			left: 0px;
+		}
+			#general_leftSnippet_bigButton { 
+				left: -25px;
+				box-shadow: rgb(132,132,132) 0.5px 0.5px 0.25px;
+				background-color: rgba(230,230,230,0.5);
+			}
+			#general_leftSnippet_elements { 
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				width: 150px;
+				height: 150px;
+				border: none;
+			}
+			#general_leftSnippet_profile { 
+				background-color: rgba(50,50,50,0.5);
+				left: 65px;
+				top: 10px;
+				height: 20px;
+				padding-top: 7.5px;
+				padding-bottom: 7.5px; 
+				font-size: 20px;
+			}
+			#general_leftSnippet_friends { 
+				background-color: rgba(50,50,50,0.5);
+				left: 47.5px;
+				top: 47.5px;
+				height: 15px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				font-size: 15px;
+			}
+			#general_leftSnippet_bets { 
+				background-color: rgba(50,50,50,0.5);
+				left: 10px;
+				top: 65px;
+				height: 15px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				font-size: 15px;
+			}
+	/*#general_rightSnippet*/
+		#general_rightSnippet { 
+			right: 0px;
+		}
+			#general_rightSnippet_bigButton { 
+				right: -25px;
+				box-shadow: rgb(132,132,132) -0.5px 0.5px 0.25px;
+				background-color: rgba(230,230,230,0.5);
+			}
+			#general_rightSnippet_elements { 
+				position: absolute;
+				right: 0px;
+				top: 0px;
+				width: 150px;
+				height: 150px;
+				border: none;
+			}
+			#general_rightSnippet_video { 
+				background-color: rgba(50,50,50,0.5);
+				right: 65px;
+				top: 10px;
+				height: 20px;
+				padding-top: 7.5px;
+				padding-bottom: 7.5px; 
+				font-size: 20px;
+			}
+			#general_rightSnippet_mic { 
+				background-color: rgba(50,50,50,0.5);
+				right: 47.5px;
+				top: 47.5px;
+				height: 20px;
+				padding-top: 7.5px;
+				padding-bottom: 7.5px;
+				font-size: 20px;
+			}
+			#general_rightSnippet_file { 
+				background-color: rgba(50,50,50,0.5);
+				right: 10px;
+				top: 65px;
+				height: 20px;
+				padding-top: 7.5px;
+				padding-bottom: 7.5px;
+				font-size: 20px;
+			}	
+	/*#general_comments*/
+		#general_comments { 
+			position: absolute;
+			height: 55%;
+			background-color: rgb(240,240,240);
+			width: 100%;
+			top: 0%;
+			left: 0%;
+			z-index: -10;
+			box-shadow: rgb(132,132,132) 0px -1px 0.25px; 
+		}
+
+/*#commentForm*/
+	#commentForm { 
+		z-index: -10;
+		height: 60%;
+		width: 100%;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		background-color: rgb(240,240,240);
+		box-shadow: rgb(132,132,132) 0px -1px 0.25px;
+		overflow: hidden; 
+	}
+	/*#commentForm_head*/
+		#commentForm_head { 
+			position: absolute;
+			top: 0px;
+			width: 100%;
+			height: 20px;
+			font-size: 15px;
+			padding-top: 2.5px;
+			text-align: center;
+			overflow: hidden;
+			z-index: 20;
+		}
+		/*#commentForm_comments*/
+			#commentForm_comments { 
+				position: absolute;
+				top: 20px;
+				left: 0px;
+				width: 100%;
+				overflow-x: hidden;
+				overflow-y: scroll;
+				height: calc(100% - 70px);
+				background-color: rgb(240,240,240);
+				border-top: solid 3px rgb(230,230,230);
+			}
+			/*.commentForm_comment*/
+				.commentForm_comment { 
+					position: relative;
+					width: 100%;
+					word-wrap: break-word;
+					margin-top: 7.5px;
+					margin-bottom: 7.5px;
+					background-color: white;
+					border-top: solid 0.3px rgb(230,230,230);
+					border-bottom: solid 0.3px rgb(230,230,230);
+				}
+				/*.commentForm_comment_avatar*/
+					.commentForm_comment_avatar {
+						position: relative;
+						top: 5px;
+						left: 5px;
+						height: 50px;
+						border-radius: 50%;
+						width: 50px;
+						margin-bottom: 10px;
+						border : solid 1px rgb(18,176,178);
+					}
+					.commentForm_comment_avatar img { 
+						height: 50px;
+						width: 50px;
+						border-radius: 50%;
+					}
+				/*.commentForm_comment_infos*/
+					.commentForm_comment_infos { 
+						position: absolute;
+						left : 70px;
+						font-size: 16px;
+						top: 5px;
+					}
+					.commentForm_comment_infos_who { 
+						font-size: 16px;
+					}
+					.commentForm_comment_infos_time { 
+						font-size: 10px;
+					}
+				.commentForm_comment_text { 
+					position: relative;
+					width: 95%;
+					font-size: 14px;
+					left: 2.5%;
+					margin-bottom: 10px;
+				}
+				.commentForm_comment_heroLink { 
+					position: relative;
+					bottom: 3px;
+					height: 15px;
+					left: 5px;
+					font-size: 10px;
+					color: black;
+					font-family: "SourceSansProSemibold";
+					text-decoration: none;
+					display: inline;
+				}
+				.commentForm_comment_liarLink { 
+					position: relative;
+					height: 15px;
+					bottom: 3px;
+					font-size: 10px;
+					margin-left: 10px;
+					color: black;
+					font-family: "SourceSansProSemibold";
+					text-decoration: none;
+					display: inline;
+				} 
+	/*#commentForm_form*/	
+		#commentForm_form { 
+			position: absolute;
+			left: 0px;
+			height: 50px;
+			top: calc(100% - 50px);
+			overflow: hidden;
+			width: 100%;
+			border: none;
+			background-color: rgb(240,240,240);
+			border-top: solid 3px rgb(230,230,230);
+		}
+			#commentForm_form_input { 
+				display:block;
+				overflow-x: hidden;
+				overflow-y: scroll;
+				position: absolute;
+				width: 75%;
+				left: 3%;
+				border: none;
+				height: 50px;
+				top: 10px;
+				font-size: 20px;
+				font-family: "SourceSansProRegular";
+				resize: none;
+				background-color: rgb(240,240,240);
+			}
+			#commentForm_form_input:focus, #commentForm_form_input:active, #commentForm_form_input:hover { 
+				outline: none;
+			}
+		#commentForm_submitButton { 
+			position: absolute;
+			max-width: 15%;
+			width: 35px;
+			height: 30px;
+			background-color: rgb(230,230,230);
+			border-radius: 50%;
+			left: 85%;
+			text-align: center;
+			padding-top: 5px; 
+			font-size: 20px;
+			bottom: 10px;
+			box-shadow: rgb(132,132,132) 0.5px 0.5px 0.25px; 
+		}
+
+/*#profile*/
+	#profile { 
+		z-index: -10;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		height: 100%;
+		width: 100%;
+		background-color: rgb(240,240,240);
+		overflow-x: hidden;
+		overflow-y: hidden;
+		padding: 0;
+	}
+	/*#profile_shadow*/
+		#profile_shadow { 
+			z-index: 30;
+			width: 100%;
+			height: 5%;
+			background-color: rgba(50,50,50,0.3);
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+		/*#profile_shadow animations*/
+			.profile_shadow-scrollAnim { 
+				-webkit-transform: translate3d(0,0,0);
+				-webkit-transform-origin: 0% 0%;
+				-webkit-transform: scaleY(2);
+				-webkit-backface-visibility: hidden;
+				-webkit-perspective: none;
+			}
+			.profile_shadow-scrollAnimReverse { 
+				-webkit-transform: translate3d(0,0,0);
+				-webkit-transform-origin: 0% 0%;
+				-webkit-transform: scaleY(1);
+				-webkit-backface-visibility: hidden;
+				-webkit-perspective: none;
+			}
+	/*#profile_close*/
+		#profile_close { 
+			position: absolute;
+			top: 3px;
+			left: 10px;
+			font-size: 20px;
+			z-index: 40;
+		}
+	/*#profile_options*/
+		#profile_options { 
+			position: absolute;
+			top: 3px;
+			right: 10px;
+			font-size: 20px;
+			z-index: 40;
+		}
+	/*#profile_avatarFormModalShade*/
+		#profile_avatarFormModalShade {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(50,50,50,0.3);
+			z-index: 50;
+			visibility: hidden;
+		}
+	/*#profile_avatarForm*/
+		#profile_avatarForm { 
+			position: absolute;
+			top: calc(50% - 225px);
+			left: 5%;
+			width: 90%;
+			height: 350px;
+			max-height: 80%;
+			z-index: 60;
+			background-color: rgb(240,240,240);
+			visibility: hidden;
+			border-radius: 25px;
+			border : solid 8px rgb(18,176,178);
+			-webkit-box-sizing: border-box; 
+		}
+			#profile_avatarForm_close {
+				position: absolute;
+				font-size: 20px;
+				color : rgb(18,176,178);
+				top: 3px;
+				left: 5px;
+			}
+			#profile_avatarForm_label {
+				position: absolute;
+				width: 70%;
+				height: 10%;
+				background-color: rgb(18,176,178);
+				border-radius: 50px;
+				-webkit-box-sizing: border-box;
+				font-size: 20px;
+				padding-top: 2px;
+				text-align: center;
+				color: rgb(240,240,240);
+				left: 15%;
+				top: 10%;
+				border : solid 3px rgb(200,200,200);
+			}
+			#profile_avatarForm_input {
+				visibility: hidden;
+			}
+			#profile_avatarForm_preview {
+				border-radius: 50%;
+				border : solid 8px rgb(18,176,178);
+				height: 140px;
+				width: 140px;
+				position: absolute;
+				top: 30%;
+				-webkit-box-sizing: border-box;
+				left: calc(50% - 70px);
+				background-image: url("../img/defaultAvatar.png");
+				background-size: 100% 100%;
+			}
+			#profile_avatarForm_submit {
+				position: absolute;
+				top: 85%;
+				height: 10%;
+				width: 50%;
+				left: 25%;
+				padding-top: 2px;
+				right: 5px;
+				font-size: 20px;
+				color: rgb(240,240,240);
+				background-color: rgb(11,113,115);
+				border-radius: 25px;
+				border : solid 3px rgb(200,200,200);
+			}
+			#profile_avatarForm_submit:focus,#profile_avatarForm_submit:active {
+				outline: none;
+			}
+			#profile_avatarForm_submit:active {
+				background-color: rgb(18,176,178);
+			}
+	/*#profile_cover*/
+		#profile_cover { 
+			background-image : url("../img/saut-en-parachute.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			border-bottom: solid 5px rgb(230,230,230);
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			height: 20%;
+			width: 100%;
+			z-index: 20;
+		}
+		/*#profile_cover animations*/
+			.profile_cover-scrollAnim { 
+			    -webkit-transform: translate3d(0,0,0);
+				-webkit-animation-duration: 0.10s;
+				-webkit-animation-name: profile_cover-scrollAnim;
+				-webkit-animation-timing-function: linear;
+				-webkit-animation-fill-mode: forwards;
+				-webkit-animation-direction: normal;
+			}
+				@keyframes profile_cover-scrollAnim {
+				  from {
+					height: 20%;
+				  }
+				  to {
+					height: 10%;
+				  }
+				}
+	/*#profile_avatar*/
+		#profile_avatar { 
+			position: absolute;
+			top: calc(20% - 20px);
+			left: calc((100% - 100px)/2);
+			width: 100px;
+			height: 100px;
+			z-index: 40;
+		}
+		#profile_avatar img { 
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			border: solid 3px rgb(230,230,230);
+		}
+		/*#profile_avatar animations*/
+			.profile_avatar-scrollAnim { 
+		    -webkit-transform: translate3d(0,-90%,0);
+			-webkit-transition: transform 100ms linear;
+			-webkit-backface-visibility: hidden;
+			-webkit-perspective: none;
+			}
+			.profile_avatar-scrollAnimReverse { 
+		    -webkit-transform: translate3d(0,0%,0);
+			-webkit-transition: transform 100ms linear;
+			-webkit-backface-visibility: hidden;
+			-webkit-perspective: none;
+			}
+		#profile_name { 
+			position: absolute;
+			top: calc(20% + 90px);
+			font-size: 18px;
+			text-align: center;
+			font-family: "BebasNeueRegular";
+			letter-spacing: 1px;
+			width: 100%;
+		}
+		/*#profile_name animations*/
+			.profile_name-scrollAnim { 
+		    -webkit-transform: translate3d(0,-90px,0);
+			-webkit-transition: transform 100ms linear;
+			-webkit-backface-visibility: hidden;
+			-webkit-perspective: none;
+			}
+			.profile_name-scrollAnimReverse { 
+		    -webkit-transform: translate3d(0,0px,0);
+			-webkit-transition: transform 100ms linear;
+			-webkit-backface-visibility: hidden;
+			-webkit-perspective: none;
+			}
+		#profile_bets { 
+			position: absolute;
+			top: calc(20% + 125px);
+			width: 100%;
+			left: 0px;
+			height: 80%;
+			overflow-x: hidden;
+			overflow-y: scroll;
+			z-index: 0;
+			border-top: solid 5px rgb(230,230,230);
+		}
+		/*#profile_bets animations*/
+			.profile_bets-scrollAnim { 
+		    -webkit-transform: translate3d(0,-100px,0);
+			-webkit-transition: transform 100ms linear;
+			-webkit-backface-visibility: hidden;
+			-webkit-perspective: none;
+			}
+			.profile_bets-scrollAnimReverse { 
+		    -webkit-transform: translate3d(0,0px,0);
+			-webkit-transition: transform 100ms linear;
+			-webkit-backface-visibility: hidden;
+			-webkit-perspective: none;
+			}
+	/*.profile_bet*/
+		.profile_bet { 
+			position: relative;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			width: 100%;
+			background-color: white;
+			border: solid 0.05px rgb(230,230,230);
+		}
+		.profile_bet_infos { 
+			font-size: 18px;
+			position: relative;
+			width: 100%;
+			text-align: center;
+			font-family: "BebasNeueBold";
+			padding-top: 10px;
+			height: 30px;
+		}
+		.profile_bet_title { 
+			font-size: 20px;
+			position: relative;
+			width: 100%;
+			text-align: center;
+			padding-top: 5px;
+			height: 30px;
+		}
+		/*.profile_bet_proof*/
+			.profile_bet_proof { 
+				position: relative;
+				margin-top: 10px;
+				width: 100%;
+			}
+			.profile_bet_proof img { 
+				width: 100%;
+				border: solid 0.05px rgb(230,230,230);
+			}
+		/*.profile_bet_likeLinks*/
+			.profile_bet_likeLinks { 
+				position: relative;
+				height: 55px;
+				padding-top: 20px;
+				font-size: 25px;
+				width: 100%;
+				text-align: center;
+			}
+			.profile_bet_likeLinks a, .profile_bet_likeLinks a:visited, .profile_bet_likeLinks a:hover { 
+				color: black;
+				text-decoration: none;
+				position: relative;
+				display: inline;
+			}
+			.profile_bet_likeLinks a:active { 
+				color: rgb(242,242,242);
+				text-decoration: none;
+			} 
+			.profile_bet_likeLinks_heroLink { 
+				margin-right: 5px;
+			}
+			.profile_bet_likeLinks_leftLink { 
+				margin-left: 5px;
+			}
+
+/*#friends*/
+	#friends { 
+		z-index: -10;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		width: 100%;
+		height: 100%;
+		color: rgb(15,15,15);
+		overflow: hidden;
+		background-color: rgb(11,113,115);
+		border-bottom: solid 3px rgb(18,176,178);
+	}
+	/*#friends_head*/
+		#friends_head {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			height: 5%;
+			width: 100%;
+			background-color: rgba(50,50,50,0.3);
+			overflow: hidden;
+		}
+		/*#friends_head_close*/
+			#friends_head_close { 
+				position: absolute;
+				top: calc(50% - 10px);
+				left: 10px;
+				line-height: 20px;
+				font-size: 20px;
+				z-index: 10;
+			}
+	/*#friends_search*/
+		#friends_search {
+			position: absolute;
+			top: 10%;
+			height: 50px;
+			width: 70%;
+			left: 15%;
+			font-size: 20px;
+			line-height: 20px;
+			-webkit-box-sizing: border-box;
+			border: solid 3px rgb(5,50,51);
+			border-radius: 10px;
+			padding-left: 10px;
+		}
+	/*#friends_results*/ 
+		#friends_results {
+			position: absolute;
+			top: calc(10% + 80px);
+			left: 0px;
+			border-top: solid 1px rgb(200,200,200);
+			height: calc(90% - 80px);
+			background-color: rgb(240,240,240);
+			overflow-x: hidden;
+			overflow-y: scroll;
+			width: 100%;
+			-webkit-box-sizing: border-box;
+			padding-top: 5px;
+		}
+		/*.friends_result*/ 
+			.friends_result {
+				position: relative;
+				margin-bottom: 5px;
+				width: 100%;
+				height: 60px;
+				border-top: solid 1px rgb(200,200,200);
+				border-bottom: solid 1px rgb(200,200,200);
+				background-color: rgb(240,240,240);	
+			}
+			/*.friends_result_name*/
+				.friends_result_name {
+					position: absolute;
+					font-size: 15px;
+					line-height: 15px;
+					top: 22.5px;
+					left: 5px;
+				}
+			/*.friends_result_avatar*/
+				.friends_result_avatar {
+					position: absolute;
+					height: 50px;
+					width: 50px;
+					top: 5px;
+					border-radius: 50%;
+					border: solid 1px rgb(200,200,200);
+					right: 5px;
+				}
+				.friends_result_avatar img {
+					position: absolute;
+					height: 100%;
+					width: 100%;
+					border-radius: 50%;
+				}
+			/*#friends_profPage*/ 
+				#friends_profPage {
+					position: absolute;
+					left: -100%;
+					top: 0%;
+					background-color: rgb(240,240,240);
+					height: 100%;
+					width: 100%;
+					overflow: hidden;
+					color: rgb(15,15,15);
+					z-index: 20;
+				}
+				/*#friends_profPage_shadow*/
+					#friends_profPage_shadow { 
+						z-index: 30;
+						width: 100%;
+						height: 5%;
+						background-color: rgba(50,50,50,0.3);
+						position: absolute;
+						top: 0px;
+						left: 0px;
+					}
+					/*#friends_profPage_shadow animations*/
+						.friends_profPage_shadow-scrollAnim { 
+							-webkit-transform: translate3d(0,0,0);
+							-webkit-transform-origin: 0% 0%;
+							-webkit-transform: scaleY(2);
+							-webkit-backface-visibility: hidden;
+							-webkit-perspective: none;
+						}
+						.friends_profPage_shadow-scrollAnimReverse { 
+							-webkit-transform: translate3d(0,0,0);
+							-webkit-transform-origin: 0% 0%;
+							-webkit-transform: scaleY(1);
+							-webkit-backface-visibility: hidden;
+							-webkit-perspective: none;
+						}
+				/*#friends_profPage_close*/
+					#friends_profPage_close { 
+						position: absolute;
+						top: 3px;
+						left: 10px;
+						font-size: 20px;
+						z-index: 40;
+					}
+				/*#friends_profPage_options*/
+					#friends_profPage_options { 
+						position: absolute;
+						top: 3px;
+						right: 10px;
+						font-size: 20px;
+						z-index: 40;
+					}
+				/*#friends_profPage_avatarFormModalShade*/
+					#friends_profPage_avatarFormModalShade {
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						background-color: rgba(50,50,50,0.3);
+						z-index: 50;
+						visibility: hidden;
+					}
+				/*#friends_profPage_cover*/
+					#friends_profPage_cover { 
+						background-image : url("../img/saut-en-parachute.jpg");
+						background-size: cover;
+						background-repeat: no-repeat;
+						border-bottom: solid 5px rgb(230,230,230);
+						position: absolute;
+						top: 0px;
+						left: 0px;
+						height: 20%;
+						width: 100%;
+						z-index: 20;
+					}
+					/*#friends_profPage_cover animations*/
+						.friends_profPage_cover-scrollAnim { 
+						    -webkit-transform: translate3d(0,0,0);
+							-webkit-animation-duration: 0.10s;
+							-webkit-animation-name: friends_profPage_cover-scrollAnim;
+							-webkit-animation-timing-function: linear;
+							-webkit-animation-fill-mode: forwards;
+							-webkit-animation-direction: normal;
+						}
+							@keyframes friends_profPage_cover-scrollAnim {
+							  from {
+								height: 20%;
+							  }
+							  to {
+								height: 10%;
+							  }
+							}
+				/*#friends_profPage_avatar*/
+					#friends_profPage_avatar { 
+						position: absolute;
+						top: calc(20% - 20px);
+						left: calc((100% - 100px)/2);
+						width: 100px;
+						height: 100px;
+						z-index: 40;
+					}
+					#friends_profPage_avatar img { 
+						width: 100px;
+						height: 100px;
+						border-radius: 50%;
+						border: solid 3px rgb(230,230,230);
+					}
+					/*#friends_profPage_avatar animations*/
+						.friends_profPage_avatar-scrollAnim { 
+					    -webkit-transform: translate3d(0,-90%,0);
+						-webkit-transition: transform 100ms linear;
+						-webkit-backface-visibility: hidden;
+						-webkit-perspective: none;
+						}
+						.friends_profPage_avatar-scrollAnimReverse { 
+					    -webkit-transform: translate3d(0,0%,0);
+						-webkit-transition: transform 100ms linear;
+						-webkit-backface-visibility: hidden;
+						-webkit-perspective: none;
+						}
+					/*#friends_profPage_name*/
+						#friends_profPage_name { 
+							position: absolute;
+							top: calc(20% + 90px);
+							font-size: 18px;
+							text-align: center;
+							font-family: "BebasNeueRegular";
+							letter-spacing: 1px;
+							width: 100%;
+						}
+						/*#friends_profPage_name animations*/
+							.friends_profPage_name-scrollAnim { 
+						    -webkit-transform: translate3d(0,-90px,0);
+							-webkit-transition: transform 100ms linear;
+							-webkit-backface-visibility: hidden;
+							-webkit-perspective: none;
+							}
+							.friends_profPage_name-scrollAnimReverse { 
+						    -webkit-transform: translate3d(0,0px,0);
+							-webkit-transition: transform 100ms linear;
+							-webkit-backface-visibility: hidden;
+							-webkit-perspective: none;
+							}
+						#friends_profPage_bets { 
+							position: absolute;
+							top: calc(20% + 125px);
+							width: 100%;
+							left: 0px;
+							height: 80%;
+							overflow-x: hidden;
+							overflow-y: scroll;
+							z-index: 0;
+							border-top: solid 5px rgb(230,230,230);
+						}
+						/*#friends_profPage_bets animations*/
+							.friends_profPage_bets-scrollAnim { 
+						    -webkit-transform: translate3d(0,-100px,0);
+							-webkit-transition: transform 100ms linear;
+							-webkit-backface-visibility: hidden;
+							-webkit-perspective: none;
+							}
+							.friends_profPage_bets-scrollAnimReverse { 
+						    -webkit-transform: translate3d(0,0px,0);
+							-webkit-transition: transform 100ms linear;
+							-webkit-backface-visibility: hidden;
+							-webkit-perspective: none;
+							}
+				/*#friends_profPage_beFriend*/
+					#friends_profPage_beFriend {
+						position: absolute;
+						top: calc(20% + 80px);
+						right: 5px;
+						z-index: 40;
+						background-color: rgb(11,113,115);
+						border: solid 3px rgb(18,176,178);
+						font-size: 20px;
+						padding-left: 10px;
+						padding-right: 10px;
+						padding-top: 5px;
+						border-radius: 10px;
+						max-width: calc(50% - 55px);
+					}
+					#friends_profPage_beFriend i {
+						position: relative;
+						display: inline;
+					}
+					#friends_profPage_beFriend_situation {
+						position: relative;
+						display: inline;
+					}
+					/*#friends_profPage_beFriend animations*/
+						.friends_profPage_beFriend-scrollAnim { 
+					    -webkit-transform: translate3d(0,-100px,0);
+						-webkit-transition: transform 100ms linear;
+						-webkit-backface-visibility: hidden;
+						-webkit-perspective: none;
+						}
+						.friends_profPage_beFriend-scrollAnimReverse { 
+					    -webkit-transform: translate3d(0,0%,0);
+						-webkit-transition: transform 100ms linear;
+						-webkit-backface-visibility: hidden;
+						-webkit-perspective: none;
+						}
+				/*.friends_profPage_bet*/
+					.friends_profPage_bet { 
+						position: relative;
+						margin-top: 5px;
+						margin-bottom: 5px;
+						width: 100%;
+						background-color: white;
+						border: solid 0.05px rgb(230,230,230);
+					}
+					.friends_profPage_bet_infos { 
+						font-size: 18px;
+						position: relative;
+						width: 100%;
+						text-align: center;
+						font-family: "BebasNeueBold";
+						padding-top: 10px;
+						height: 30px;
+					}
+					.friends_profPage_bet_title { 
+						font-size: 20px;
+						position: relative;
+						width: 100%;
+						text-align: center;
+						padding-top: 5px;
+						height: 30px;
+					}
+					/*.friends_profPage_bet_proof*/
+						.friends_profPage_bet_proof { 
+							position: relative;
+							margin-top: 10px;
+							width: 100%;
+						}
+						.friends_profPage_bet_proof img { 
+							width: 100%;
+							border: solid 0.05px rgb(230,230,230);
+						}
+					/*.friends_profPage_bet_likeLinks*/
+						.friends_profPage_bet_likeLinks { 
+							position: relative;
+							height: 55px;
+							padding-top: 20px;
+							font-size: 25px;
+							width: 100%;
+							text-align: center;
+						}
+						.friends_profPage_bet_likeLinks a, .friends_profPage_bet_likeLinks a:visited, .friends_profPage_bet_likeLinks a:hover { 
+							color: black;
+							text-decoration: none;
+							position: relative;
+							display: inline;
+						}
+						.friends_profPage_bet_likeLinks a:active { 
+							color: rgb(242,242,242);
+							text-decoration: none;
+						} 
+						.friends_profPage_bet_likeLinks_heroLink { 
+							margin-right: 5px;
+						}
+						.friends_profPage_bet_likeLinks_leftLink { 
+							margin-left: 5px;
+						}
+
+/*#bets*/
+	#bets { 
+		z-index: -10;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		width: 100%;
+		height: 100%;
+		background-color: lightblue;
+	}
+	/*#bets_close*/
+		#bets_close { 
+			position: absolute;
+			top: 3px;
+			left: 10px;
+			font-size: 20px;
+			z-index: 10;
+		}
+
+/*#fileProof*/
+	#fileProof {
+		z-index: -10;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		height: 100%;
+		width: 100%;
+		background-color: rgb(240,240,240);
+		overflow-x: hidden;
+		overflow-y: hidden;
+		padding: 0;
+	}
+	/*#fileProof_close*/
+		#fileProof_close { 
+			position: absolute;
+			top: 3px;
+			right: 10px;
+			font-size: 20px;
+			z-index: 10;
+		}
+	/*#fileProof_title*/
+		#fileProof_title {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			height : 50px;
+			width: 100%;
+			text-align: left;
+			color: rgb(240,240,240);
+			background-color: rgb(18,176,178);
+			-webkit-box-sizing: border-box;
+			padding-left: 10px;
+			font-size: 20px;
+			padding-top: 10px;
+			text-align: left;
+		}
+	/*#fileProof_form*/
+		#fileProof_form {
+			position: absolute;
+			top: 50px;
+			height: calc(100% - 50px);
+			width: 100%;
+			-webkit-box-sizing: border-box;
+			background-color: rgb(240,240,240);
+			overflow: hidden;
+		}
+			#fileProof_form_betInputLabel {
+				position: absolute;
+				font-size: 20px;
+				color: rgb(11,113,115);
+				width: 100%;
+				left: 5%;
+				top: 20px;
+				-webkit-box-sizing: border-box;
+			}
+			/*#fileProof_form_betChoice*/
+				#fileProof_form_betChoice {
+					position: absolute;
+					height: 60px;
+					top: 50px;
+					color: rgb(15,15,15);
+					width: 70%;
+					left: 10%;
+					-webkit-box-sizing: border-box;
+					border: solid 3px rgb(11,113,115);
+					border-radius: 10px;
+				}
+					#fileProof_form_betChoice_betName {
+						position: absolute;
+						left: 5px;
+						width: calc(100% - 45px);
+						line-height: 17px;
+						font-size: 17px;
+						top: 20px;
+					}
+					#fileProof_form_betChoice_betImage {
+						position: absolute;
+						top: 10px;
+						height: 30px;
+						width: 30px;
+						right: 10px;
+						border-radius: 50%;
+						border : solid 1px rgb(18,176,178);
+					}
+					#fileProof_form_betChoice_betImage img {
+						height: 100%;
+						width: 100%;
+						border-radius: 50%;
+					}
+			/*#fileProof_form_betModal*/
+				#fileProof_form_betModal {
+					position: absolute;
+					top: 0px;
+					left: 100%;
+					height: 100%;
+					width: 100%;
+					background-color: rgb(11,113,115);
+					overflow: hidden;
+					border-top: solid 3px rgb(18,176,178);
+					z-index: 20;
+				}
+					#fileProof_form_betModal_close {
+						position: absolute;
+						top: 5px;
+						right: 10px;
+						font-size: 20px;
+						color: rgb(18,176,178);
+					}
+					/*#fileProof_form_betModal_search*/
+						#fileProof_form_betModal_search {
+							position: absolute;
+							top: 10px;
+							width: calc(100% - 50px);
+							left: 10px;
+							height: 50px;
+							font-size: 20px;
+							-webkit-box-sizing: border-box;
+							padding-left: 10px;
+							border-radius: 25px;
+							border : solid 3px rgb(200,200,200);
+						}
+						#fileProof_form_betModal_search:focus {
+							outline: none;
+						}
+					/*#fileProof_form_betModal_betResults*/
+						#fileProof_form_betModal_betResults {
+							position: absolute;
+							top: 70px;
+							height: calc(100% - 60px);
+							width: 100%;
+							-webkit-box-sizing: border-box;
+							border-top: solid 3px rgb(18,176,178);
+							overflow-x: hidden;
+							overflow-y: scroll;
+							background-color: rgb(240,240,240);
+						}
+						/*#fileProof_form_betModal_betResultsLoader*/
+							#fileProof_form_betModal_betResultsLoader {
+								position: absolute;
+								top: 70px;
+								width: 100%;
+								height: calc(100% - 60px);
+								background-color: rgb(240,240,240);
+								visibility: visible;
+								z-index: 300;
+							}
+							#fileProof_form_betModal_betResultsLoader img {
+								position: absolute;
+								width: 100px;
+								height: 100px;
+								left: calc(50% - 50px);
+								top: calc(50% - 100px);
+							}
+						/*.fileProof_form_betModal_betResult*/
+							.fileProof_form_betModal_betResult {
+								position: relative;
+								margin-bottom: 5px;
+								width: 100%;
+								height: 60px;
+								border-top: solid 1px rgb(200,200,200);
+								border-bottom: solid 1px rgb(200,200,200);
+								background-color: rgb(240,240,240);
+							}
+							.fileProof_form_betModal_betResult:active {
+								background-color: rgb(200,200,200);
+							}
+							/*.fileProof_form_betModal_betResult_name*/
+								.fileProof_form_betModal_betResult_name {
+									position: absolute;
+									font-size: 17px;
+									font-family: "SourceSansProSemibold";
+									color: rgb(15,15,15);
+									line-height: 17px;
+									top: 3px;
+									left: 5px;
+									width: calc(0.45*(100% - 60px));
+									display: inline;
+								}
+								.fileProof_form_betModal_betResult_name i {
+									font-size: 15px;
+								}
+							/*.fileProof_form_betModal_betResult_time*/
+								.fileProof_form_betModal_betResult_time {
+									position: absolute;
+									font-size: 12px;
+									color: rgb(18,176,178);
+									font-family: "SourceSansProRegular";
+									top: 5px;
+									line-height: 17px;
+									vertical-align: text-bottom;
+									left: calc(0.45*(100% - 60px) + 3px);
+									width: calc(0.55*(100% - 60px));
+									display: inline;
+								}
+								.fileProof_form_betModal_betResult_time i {
+									font-size: 12px;
+								}
+							/*.fileProof_form_betModal_betResult_players*/
+								.fileProof_form_betModal_betResult_players {
+									position: absolute;
+									font-size: 12px;
+									color: rgb(40,40,40);
+									top: 43px;
+									font-family: "SourceSansProRegular";
+									left: 5px;
+								}
+								.fileProof_form_betModal_betResult_players i {
+									font-size: 13px;
+								}
+							/*.fileProof_form_betModal_betResult_image*/
+								.fileProof_form_betModal_betResult_image {
+									position: absolute;
+									height: 40px;
+									width: 40px;
+									border-radius: 50%;
+									border : solid 1px rgb(18,176,178);
+									top: 10px;
+									right: 15px;
+								}
+								.fileProof_form_betModal_betResult_image img {
+									height: 100%;
+									width: 100%;
+									border-radius: 50%;
+								}
+			#fileProof_form_betInput {
+				visibility: hidden;
+			}
+			#fileProof_form_proofInputLabel {
+				position: absolute;
+				top: 120px;
+				height: 40px;
+				width: 70%;
+				left: 10%;
+				font-size: 20px;
+				-webkit-box-sizing: border-box;
+				padding-top: 5px;
+				text-align: center;
+				background-color: rgb(18,176,178);
+				border-radius: 25px;
+				border : solid 3px rgb(200,200,200);
+				color: rgb(240,240,240);
+			}
+			#fileProof_form_proofInput {
+				visibility: hidden;
+			}
+			#fileProof_form_preview {
+				position: absolute;
+				height: calc(100% - 250px);
+				top: 170px;
+				width: 80%;
+				left: 10%;
+				border : solid 3px rgb(18,176,178);
+				border-radius: 10px;
+				-webkit-box-sizing: border-box;
+			}
+			#fileProof_form_preview_image {
+				width: 100%;
+				position: absolute;
+				max-height: 100%;
+				object-fit: fill;
+				left: 0;
+				top: 0;
+			}
+			#fileProof_form_preview_video {
+				height: 100%;
+				width: 100%;
+				object-fit: fill;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			#fileProof_form_preview_presTextInput {
+				height: 40px;
+				font-size: 25px;
+				font-family: "BebasNeueBold";
+				line-height: 25px;
+				color: rgb(240,240,240);
+				width: 100%;
+				left: 0%;
+				border: none;
+				position: absolute;
+				top: calc(100% - 40px);
+				z-index: 10;
+				letter-spacing: 1px;
+				background-color: rgba(15,15,15,0.15);
+				text-align: center;
+				outline: none;
+				padding-top: 7.5px;
+				-webkit-box-sizing: border-box;
+				visibility: hidden;
+			}
+			#fileProof_form_preview_presTextInput:focus {
+				outline: none;
+			}
+			#fileProof_form_submitButton {
+				position: absolute;
+				bottom: 12.5px;
+				height: 50px;
+				width: 50px;
+				border-radius: 50%;
+				left: 80%;
+				right: 10px;
+				font-size: 30px;
+				line-height: 30px;
+				padding-top: 8px;
+				text-align: center;
+				color: rgb(240,240,240);
+				background-color: rgb(18,176,178);
+				border : solid 3px rgb(200,200,200);
+				-webkit-box-sizing: border-box;
+			}
+			#fileProof_form_submit {
+				visibility: hidden;
+			}

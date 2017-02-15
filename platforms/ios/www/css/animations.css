@@ -1,0 +1,184 @@
+.topCollapsing { 
+-webkit-transform: translate3d(0,100%,0);
+-webkit-transition: transform 600ms linear;
+-webkit-backface-visibility: hidden;
+-webkit-perspective: none;
+}
+.topHiding { 
+-webkit-transform: translate3d(0,-100%,0);
+-webkit-transition: transform 600ms linear;
+-webkit-backface-visibility: hidden;
+-webkit-perspective: none;
+}
+
+.bottomCollapsing { 
+-webkit-transform: translate3d(0,-100%,0);
+-webkit-transition: transform 600ms linear;
+-webkit-backface-visibility: hidden;
+-webkit-perspective: none;
+}
+.bottomHiding { 
+-webkit-transform: translate3d(0,100%,0);
+-webkit-transition: transform 600ms linear;
+-webkit-backface-visibility: hidden;
+-webkit-perspective: none;
+} 
+
+.rightCollapsing { 
+-webkit-transform: translate3d(-100%,0,0);
+-webkit-transition: transform 400ms linear;
+-webkit-backface-visibility: hidden;
+-webkit-perspective: none;
+}
+.rightHiding { 
+-webkit-transform: translate3d(100%,0,0);
+-webkit-transition: transform 400ms linear;
+-webkit-backface-visibility: hidden;
+-webkit-perspective: none;
+}
+
+.leftCollapsing { 
+-webkit-transform: translate3d(100%,0,0);
+-webkit-transition: transform 400ms linear;
+-webkit-backface-visibility: hidden;
+-webkit-perspective: none;
+}
+.leftHiding{ 
+-webkit-transform: translate3d(-100%,0,0);
+-webkit-transition: transform 400ms linear;
+-webkit-backface-visibility: hidden;
+-webkit-perspective: none;
+}
+
+/* -moz-transition: transform 600ms linear;
+-o-transition: transform 600ms linear; */
+
+.slideLeft { 
+	-webkit-transform: translate3d(-200%,0%,0);
+	transform: translate3d(-200%,0%,0);
+	animation-duration: 0.5s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-fill-mode: forwards;
+}
+
+.JSAnimated { 
+	-webkit-transform: translate3d(0%,0%,0);
+	-webkit-transition: transform 400ms linear;
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: none;	
+}
+
+.slideTop { 
+	-webkit-transform: translate3d(0%,-100%,0);
+	-webkit-transition: transform 400ms linear;
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: none;
+}
+
+.slideBottom { 
+	-webkit-transform: translate3d(0%,100%,0);
+	-webkit-transition: transform 400ms linear;
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: none;
+}
+
+.slideTop2 { 
+	-webkit-transform: translate3d(0%,0%,0);
+	-webkit-transition: transform 400ms linear;
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: none;
+}
+
+.show {
+    -webkit-transform: translate3d(0,0,0);
+	animation-duration: 0.5s;
+	animation-name: appearing;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-fill-mode: forwards;
+}
+	@keyframes appearing {
+	  from {
+	    opacity: 0;
+	    visibility: hidden;
+	  }
+	  to {
+	    opacity: 1;
+	    visibility: visible;
+	  }
+	}
+
+.hide {
+    -webkit-transform: translate3d(0,0,0);
+	animation-duration: 0.5s;
+	animation-name: disappearing;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-fill-mode: forwards;
+}
+	@keyframes disappearing {
+	  from {
+	    visibility: visible;
+	   
+	  }
+	  to {
+	    visibility: hidden;
+	    
+	  }
+	}
+	 
+.rotate-90left { 
+	-webkit-transform: translate3d(0,0,0);
+	-webkit-transform-origin: 0px 0px;
+	-webkit-transform: rotate(-90deg);
+	-webkit-transition: transform 250ms linear;
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: none;
+}
+.rotate0left { 
+	-webkit-transform: translate3d(0,0,0);
+	-webkit-transform-origin: 0px 0px;
+	-webkit-transform: rotate(0deg);	
+	-webkit-transition: transform 250ms linear;
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: none;
+}
+
+.rotate90right { 
+	-webkit-transform: translate3d(0,0,0);
+	-webkit-transform-origin: 100% 0%;
+	-webkit-transform: rotate(90deg);	
+	-webkit-transition: transform 250ms linear;
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: none;
+}
+.rotate0right { 
+	-webkit-transform: translate3d(0,0,0);
+	-webkit-transform-origin: 100% 0%;
+	-webkit-transform: rotate(0deg);
+	-webkit-transition: transform 250ms linear;
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: none;
+}
+
+.rotatePanelAppear90left { 
+	-webkit-transform: translate3d(0,0,0);
+	-webkit-transform-origin: 0% 0%;
+	-webkit-transform: rotate(0deg);
+	-webkit-transition: transform 250ms linear;
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: none;
+}
+.rotatePanelDisappear90left { 
+	-webkit-transform: translate3d(0,0,0);
+	-webkit-transform-origin: 0% 0%;
+	-webkit-transform: rotate(90deg);
+	-webkit-transition: transform 250ms linear;
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: none;
+}
+
+.rotate180 { 
+	-webkit-transform: translate3d(0,0,0);
+	-webkit-transform: rotate(180deg) scaleX(-1);
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: none;
+}

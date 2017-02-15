@@ -1,0 +1,20 @@
+$noir : rgb(15,15,15);
+$noirClair : rgb(34,34,34);
+$grisFonce : rgb(51,51,51);
+$gris : rgb(132,132,132);
+$grisClair : rgb(200,200,200);
+$blanc : rgb(240,240,240);
+
+$bleuVertClair #18EFF2 rgb(24,239,242);
+$bleuVert      #12B0B2 rgb(18,176,178);
+$bleuVertFonce #0B7173 rgb(11,113,115);
+$bleuVertDark  #053233 rgb(5,50,51);
+
+$grisBleuDark 	   #4F5E69 rgb(79, 94, 105);
+$grisBleuFonce     #627482 rgb(98, 116, 130);
+$grisBleu          #87A0B2 rgb(135, 160, 178);
+$grisBleuClair     #A4C3D8 rgb(164, 195, 216);
+$grisBleuLight     #B9DBF3 rgb(185, 219, 243);
+
+border radius à 50%,5px,10px,25px,50px
+border solid à 1.5px 3px 5px 8px 15px
